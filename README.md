@@ -20,7 +20,10 @@ to be more general.
 
 
 ## Dependencies:
-
+numpy
+matplotlib
+sys
+written in python 2.7 (update print statement if using python3)
 
 
 ## Parameters:
@@ -41,7 +44,8 @@ A moving window size that is based on suspected transition region around pattern
 How lenient the outlier detection program is when counting outliers.  That is, the algorithm counts all outliers within +/- margin from the time-series data point in question, and if the number of outliers are less than or equal to the leniency value, the program does not identify the outlier as a pattern-wise outlier, and allows it to be filtered out in the Discrete Fast Fourier Transfrom (FFT) low pass filter process.  If the number of identified outliers are greater than the leniency value, the algorithm identifies the block of data as a pattern-wise outlier, and performs the FFT only on the data up to and not including the pattern-wise outlier.  The outlier region is skipped momentarily, and the process repeats in order to find other stretches of reliable data.  Each stretch of reliable data, after passing through a low pass filter FFT process is then connected across any pattern-wise outliers by a simple linear interpolation.  The interpolation routine can be modified to fit other use cases.  The leniency value should be chosen based on the expected outlier signature in the data. That is, a leniency should be high enough to allow any expected "one-off" outliers through to the low-pass filter and FFT stage, while low enough to catch pattern-wise outliers. Must be less than windowSize.
 
 ### I still need to add explanations for...
-to add: how to run, cmd line args, etc.
+to run via Mac terminal command line:
+python TSMW_FFT.py inputFile.csv > outputFile.csv
 
 ## Tags: 
 FFT, Fast Fourier Transform, Outlier Detection, Pattern-wise Outlier Detection, Moving Window Scan, Python
