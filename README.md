@@ -21,8 +21,11 @@ to be more general.
 
 ## Dependencies:
 numpy
+
 matplotlib
+
 sys
+
 written in python 2.7 (update print statement if using python3)
 
 
