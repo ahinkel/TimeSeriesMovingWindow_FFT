@@ -19,7 +19,7 @@ to be more general.
 
 
 ## Note:
-I really need to clean this code and read me up.
+I really need to clean this code and readme up.
 
 
 ## Dependencies:
