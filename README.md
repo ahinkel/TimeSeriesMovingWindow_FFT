@@ -13,7 +13,7 @@ are caught by the outlier detection routine.  For sufficiently large batches,
 the program linearly interpolates to connect the time series data, but the 
 particular functionality can be chosen for the user's specific purpose.
 
-The current outliers the program is designed to catch are -1's in the time 
+The current outliers that the program is designed to catch are -1's in the time 
 series data.  This can be changed as needed.  I hope to update the code
 to be more general.
 
